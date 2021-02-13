@@ -1,0 +1,85 @@
+*{
+    font-family: 'mali' , cursive;
+}
+a{
+    color: rgb(199, 9, 224) !important;
+    text-decoration: none !important;
+}
+.divICON{
+    position: relative;
+}
+.divBlockAB{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 10px;
+    right: 5vw;
+    background-color: burlywood;
+    width: 3vw;
+    text-align: center;
+    padding: 0.1vw;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.containerA{
+    display: flex;
+    flex-direction: row;
+}
+.itemA{
+    width:100vw;
+    height: 28vh;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+.itemA:hover{
+    animation: ZoomA 0.5s forwards;
+}
+@keyframes ZoomA{
+    from{
+        height:28vh;
+    }to{
+        height:35vh;
+        font-size: 130%;
+        color: rgb(255, 0, 0);
+    }
+}
+.containerB{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+.itemB{
+    width:30vw;
+    height: 20vh;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+.itemB:hover{
+    animation: ZoomB 0.5s forwards;
+}
+@keyframes ZoomB{
+    from{
+        height:20vh;
+        width: 30vw;
+    }to{
+        height:28vh;
+        width: 33vw;
+        font-size: 130%;
+        color: rgb(255, 161, 161);
+    }
+#refreshP{
+    animation: rotation 0.8s infinite linear;
+
+}
+@keyframes rotation{
+    from{
+        transform: rotate(359deg);
+    }to{
+        transform: rotate(0deg);
+    }
+}

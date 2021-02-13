@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COVID-19 eiei </title>
+    <meta name="author" content="Muffin"/>
+    <meta charset="UTF-8"/>
+    <meta name="title" content="COVID-19 REPORTS"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head> 
+<body>
+    <div class="divICON">
+        <div class="divBlockAB" onclick="refreshPAGE()">
+            <svg xmlns="http://www.w3.org/2000/svg" id="refreshP" width="48" height="48" viewBox="0 0 24 24"><path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/></svg>
+            <p style="margin-top: -2%">รีเฟรช</p>
+        </div>
+    </div>
+    
+    <div>
+        <h1 style="font-size: 350%;">COVID-19 SITUATION REPORTS</h1>
+        <h5 style="font-size: 150%; margin-top: -2%;">อัพเดทข้อมูลล่าสุด : <span id="UpdateDate"></span></h5>
+        <h5 style="font-size: 100%; margin-top: -2%;">ที่มา : <a id ="SourceA" href="#" target="_blank"><span id="Source"></span></a></h5>
+    </div>
+    <div class="container">
+        <div class="containerA">
+              <div class="itemA" style="background-color: rgb(255,129,129);"><h1>ติดเชื่อสะสม</h1>
+                <h1 style="font-size: 350%";><span id="Confirmed"></span> คน</h1>
+                <h3>(เพิ่มขึ้น <span id="NewConfirmed"></span> คน)</h3>
+            </div>  
+              
+        </div>
+        <div class="containerB">
+            <div class="itemB" style="background-color: rgb(129,236,255);">
+            <h1>หายแล้ว</h1>
+            <h1 style="font-size: 350%";><span id="Recovered"></span> คน</h1>
+            </div>
+            <div class="itemB" style="background-color: rgb(156,245,144);">
+                <h1>รักษาอยู่</h1>
+                <h1 style="font-size: 350%";><span id="Hospitalized"></span> คน</h1>
+            </div>
+            <div class="itemB" style="background-color: rgb(172,172,172);">
+                <h1>เสียชีวิต</h1>
+                <h1 style="font-size: 350%";><span id="Deaths"></span> คน</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        axios({
+        method: "get",
+        url: "https://covid19.th-stat.com/api/open/today",
+        responseType: 'json'
+        }).then(function(response){
+            console.log(response);
+            document.getElementById('UpdateDate').innerHTML=response.data['UpdateDate']
+            document.getElementById('Source').innerHTML=response.data['Source']
+            document.getElementById('SourceA').setAttribute("href" , response.data["Source"])
+            document.getElementById('Confirmed').innerHTML=numberWithCommas(response.data['Confirmed']);
+            document.getElementById('NewConfirmed').innerHTML=numberWithCommas(response.data['NewConfirmed']);
+            document.getElementById('Recovered').innerHTML=numberWithCommas(response.data['Recovered']);
+            document.getElementById('Hospitalized').innerHTML=numberWithCommas(response.data['Hospitalized']);
+            document.getElementById('Deaths').innerHTML=numberWithCommas(response.data['Deaths']);
+        });
+        function refreshPAGE(){
+            location.reload();
+        }
+    </script>
+</body>   
+</html>

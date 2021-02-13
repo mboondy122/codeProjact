@@ -1,0 +1,183 @@
+* {
+  font-family: "Mali", cursive;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgb(0, 58, 192) !important;
+}
+
+body {
+  width: 99%;
+  height: 93vh;
+  animation: bgchange 3s infinite alternate;
+}
+
+@keyframes bgchange {
+  0% {
+    background: #ee4035;
+  }
+  25% {
+    background: #f37736;
+  }
+  50% {
+    background: #fdf498;
+  }
+  75% {
+    background: #7bc043;
+  }
+  100% {
+    background: #0392cf;
+  }
+}
+
+.divICON {
+  position: relative;
+}
+
+.divBlockAB {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 10px;
+  right: 5vw;
+  width: 5vw;
+  height: 12vh;
+  text-align: center;
+  background-color: rgb(255, 245, 155);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerA {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.itemA {
+  width: 96vw;
+  height: 28vh;
+}
+
+.itemA:hover {
+  animation: Zoom 0.5s forwards;
+}
+
+@keyframes Zoom {
+  from {
+    width: 96vw;
+    height: 28vh;
+    color: #000;
+  }
+  to {
+    width: 96vw;
+    height: 35vh;
+    font-size: 120%;
+    color: #fff;
+  }
+}
+
+.itemATEXT:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.containerB {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2vh;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.itemB {
+  width: 30vw;
+  height: 20vh;
+}
+
+.itemB:hover {
+  animation: ZoomB 0.5s forwards;
+}
+
+@keyframes ZoomB {
+  from {
+    width: 30vw;
+    height: 20vh;
+  }
+  to {
+    width: 31vw;
+    height: 25vh;
+    font-size: 120%;
+  }
+}
+
+.divBlock {
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+}
+
+#refreshP {
+  animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+body {
+  background: linear-gradient(
+    rgb(153, 248, 219),
+    rgb(153, 248, 219),
+    rgb(153, 248, 219)
+  );
+  width: 99%;
+  height: 95vh;
+  animation: bgchange 7s infinite alternate;
+}

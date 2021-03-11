@@ -1,0 +1,63 @@
+//check connecttion database
+GET http://localhost:5000/ HTTP/1.1
+
+###
+//Renew token
+POST http://localhost:5000/token HTTP/1.1
+Content-type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJVMDAwMiIsImZpcnN0X25hbWUiOiLguKPguLHguJDguJnguLHguJnguJfguYwiLCJsYXN0X25hbWUiOiLguKvguLLguI3guYHguIHguYnguKciLCJFbWFpbCI6ImJveGtlYXdAZ21haWwuY29tIiwidGVsIjoiMDkyMjI5NDI0MiIsImFkZHJlc3MiOiIyMzQvNDE4IOC4rS7guYDguKHguLfguYjguK3guIfguJ7guLTguKnguJPguLjguYLguKXguIEg4LiILuC4nuC4tOC4qeC4k-C4uOC5guC4peC4gSAiLCJyb29tX25vIjoiNDE4IiwiaWF0IjoxNjE1NDg4OTE4fQ.ctNJ_jL9L2XP22WvneIiJyUDObQo2YTG1N_Qk9iPjlo"
+}
+
+###
+// login
+POST http://localhost:5000/login HTTP/1.1
+Content-type: application/json
+
+{
+    "email": "boxkeaw@gmail.com",
+    "password": "asdf123"
+
+}
+
+###
+// Create user
+POST http://localhost:5000/user HTTP/1.1
+Content-type: application/json
+
+{
+    "uid": "U0002",
+    "email": "boxkeaw@gmail.com",
+    "password": "asdf123",
+    "first_name": "รัฐนันท์",
+    "last_name": "หาญแก้ว",
+    "tel": "0922294242",
+    "address": "234/418 อ.เมื่องพิษณุโลก จ.พิษณุโลก ",
+    "room_no": "418"
+
+}
+
+
+
+
+###
+//DELETE USER
+
+DELETE http://localhost:5000/user HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJVMDAwMiIsInRlbCI6IjA5MjIyOTQyNDIiLCJhZGRyZXNzIjoiMjM0LzQxOCDguK0u4LmA4Lih4Li34LmI4Lit4LiH4Lie4Li04Lip4LiT4Li44LmC4Lil4LiBIOC4iC7guJ7guLTguKnguJPguLjguYLguKXguIEgIiwicm9vbV9ubyI6IjQxOCIsImlhdCI6MTYxNTQ4ODkzOSwiZXhwIjoxNjE1NDg4OTU5fQ.IwLlAx2bs1zUT8zWeCXqT3ggPjtXPADHhrg45Qaturo
+
+###
+//UPDATE USER
+
+PUT  http://localhost:5000/user HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJVMDAwMiIsImVtYWlsIjoiYm94a2Vhd0BnbWFpbC5jb20iLCJ0ZWwiOiIwOTIyMjk0MjQyIiwiYWRkcmVzcyI6IjIzNC80MTgg4LitLuC5gOC4oeC4t-C5iOC4reC4h-C4nuC4tOC4qeC4k-C4uOC5guC4peC4gSDguIgu4Lie4Li04Lip4LiT4Li44LmC4Lil4LiBICIsInJvb21fbm8iOiI0MTgiLCJpYXQiOjE2MTU0OTI2MzYsImV4cCI6MTYxNTQ5NjIzNn0.qf3s2meCnCiR77f1B-9yGFsMEy3COsLNSQwyblN3LPU
+Content-type: application/json
+
+{
+    "first_name": "รัฐนันท์",
+    "last_name": "หาญแก้ว",
+    "tel": "0922294242",
+    "address": "234/418 อ.เมื่องพิษณุโลก จ.พิษณุโลก ",
+    "room_no": "4180"
+}

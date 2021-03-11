@@ -1,0 +1,23 @@
+{
+  "name": "authentication_server",
+  "version": "1.0.0",
+  "description": "Authentication Server for Software engineering project",
+  "main": "server.js",
+  "scripts": {
+    "auth": "nodemon authServer.js",
+    "api": "nodemon apiServer.js",
+    "serve": "nodemon server.js"
+  },
+  "author": "H ratthanan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}

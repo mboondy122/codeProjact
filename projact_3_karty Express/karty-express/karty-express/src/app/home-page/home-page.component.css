@@ -1,0 +1,57 @@
+.container {
+  margin-top: 10vh;
+  width: 100vw;
+  height: 30vh;
+  background: url("../../assets/bgc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+h1 {
+  margin-top: 5vh;
+  margin-left: 20vw;
+  font-size: 250%;
+}
+.inpBox[type="text"] {
+  width: 50vw;
+  height: 5vh;
+  margin-top: -2vw;
+  margin-left: 25vw;
+  border: 5px solid #900c3f;
+  border-radius: 30px;
+  font-size: large;
+  text-align: center;
+}
+.inpBox[type="text"]:focus {
+  background-color: burlywood;
+  color: #fff;
+}
+.btn {
+  margin-top: 2vh;
+  width: 10vw;
+  height: 5vh;
+  color: #fff;
+  border-radius: 30px;
+  background-color: darksalmon;
+  margin-left: 45vw;
+  text-align: center;
+  font-size: larger;
+  cursor: pointer;
+}
+.body {
+  width: 100vw;
+  height: 60vh;
+  background-color: rgb(94, 63, 95);
+}
+img {
+  margin-top: 10vh;
+  margin-left: 35vw;
+  width: 30vw;
+  height: 40vh;
+}
+h2 {
+  text-align: center;
+  color: rgb(233, 94, 2);
+  font-family: "Charmonman", cursive;
+}

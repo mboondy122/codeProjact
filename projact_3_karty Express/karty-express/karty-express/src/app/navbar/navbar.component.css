@@ -1,0 +1,11 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #511845;
+}
+img {
+  width: 120px;
+  height: 60px;
+}
